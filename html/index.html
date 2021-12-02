@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,html {
+      background-color: pink;
+      margin: 0;
+      height: 100%;
+    }
+    .a {
+      height: 100%;
+      grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+      grid-template-rows: ;
+      grid-template-areas:
+      "a1 a1 a2"
+      "a1 a1 a2"
+      "a3 a3 a3"
+      ;
+      grid-template: 
+      "a1 a1 a2" 1fr
+      "a1 a1 a2" 1fr
+      "a3 a3 a3" 1fr 
+    / 1fr 1fr 1fr
+      ;
+      row-gap: ;
+      column-gap: ;
+      gap: row column;
+
+      justify-content: ;
+      align-content: ;
+      justify-items: ;
+      align-items: ;
+      grid-auto-rows: ;
+      grid-auto-columns: ;
+      justify-self: ;
+      align-self: ;
+      grid-column-start: ;
+      grid-row: ;
+      grid-area: row /column /row /column;
+
+  
+    }
+    .b {
+      background-color: red;
+  
+    }
+    .c{
+      background-color: skyblue;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+    .d {
+     background-color: green;
+     height: 100%;
+     
+    }
+  </style>
+</head>
+<body>
+  <div class="a">
+    <div class="b">23123</div>
+    <div class="c">
+      123
+      <div class="d">12312</div>
+    </div>
+    
+  </div>
+
+
+</body>
+</html>

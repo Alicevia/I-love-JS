@@ -17,4 +17,34 @@ function f3(a: number, b: number, c: number) { }
 
 sum = f3
 
+// 函数的参数类型为父类型 
 // 函数参数逆变 双逆变  返回值协变
+
+class Animal {
+  doAnimalThing(): void {
+    console.log("I am a Animal!")
+  }
+}
+
+class Dog extends Animal {
+  doDogThing(): void {
+    console.log("I am a Dog!")
+  }
+}
+
+class Cat extends Animal {
+  doCatThing(): void {
+    console.log("I am a Cat!")
+  }
+}
+
+function makeAnimalAction(animalAction: (animal: Animal) => void): void {
+  let cat: Cat = new Cat()
+  animalAction(cat)
+}
+
+function dogAction(dog: Dog) {
+  dog.doDogThing()
+}
+
+makeAnimalAction(dogAction)
