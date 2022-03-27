@@ -7,11 +7,10 @@
   <title>Document</title>
   <style>
     body,html {
-      background-color: pink;
       margin: 0;
       height: 100%;
     }
-    .a {
+    /* .a {
       height: 100%;
       grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
       grid-template-rows: ;
@@ -43,32 +42,62 @@
       grid-area: row /column /row /column;
 
   
-    }
-    .b {
-      background-color: red;
-  
+    } */
+
+    /* .b{
+      grid-area:1/1/1/1;
+      justify-self: end;
+      align-self: center;
     }
     .c{
-      background-color: skyblue;
-      flex-grow: 1;
-      overflow: hidden;
+      grid-area:1/1/1/1;
+      align-self: flex-end;
+      justify-self: center;
+    } */
+
+    .main {
+      display: flex;
+      width: 100%;
+      height: 100%;
     }
-    .d {
-     background-color: green;
-     height: 100%;
-     
+  
+    .a{
+      width: 208px;
+    }
+    .c {
+      position: fixed;
+      background-color: pink;
+      height: 100%;
+      width: inherit;
+
+      
+    }
+    .b {
+      height: 1000px;
     }
   </style>
 </head>
 <body>
-  <div class="a">
-    <div class="b">23123</div>
-    <div class="c">
-      123
-      <div class="d">12312</div>
-    </div>
+  <div class="main">
+    <div class="a">
+      <div class="c">
+        left
+      </div>
+      90
     
+      <!-- 如果你不花时间在这些无意义上的事，那你会花更多无意义的时间 -->
+      <!-- 世间万象，想必只有人会认为自己是个废物 -->
+    </div>
+    <div class="b">
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+      <p>right</p>
+    </div>
   </div>
+
+
 
 
 </body>

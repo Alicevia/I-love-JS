@@ -27,16 +27,26 @@ let obj = {};
 console.log(obj.isString("123"));
 console.log(obj.isNumber("1"));
 
-// let currie = (fn) => {
-//   let len = fn.length; //函数参数
-//   let ary = [];
-//   let a = (...arg) => {
-//     ary.push(...arg);
-//     if (ary.length >= len) {
-//       return fn(...ary.slice(0, len));
-//     } else {
-//       return a;
-//     }
-//   };
-//   return a;
-// };
+function sum(a, b, c) {
+  return a + b + c;
+}
+function curry(fn, ...ar) {
+  let len = fn.length;
+  if (len == 0) {
+    return fn;
+  }
+  let args = [...ar];
+  if (args.length >= len) return fn(...args.slice(0, len));
+  let tempFn = (...arg) => {
+    args.push(...arg);
+    if (args.length >= len) {
+      return fn(...args.slice(0, len));
+    } else {
+      return tempFn;
+    }
+  };
+  return tempFn;
+}
+let curried = curry(sum);
+
+curried(1)(2)(4);

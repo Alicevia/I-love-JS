@@ -5,7 +5,7 @@
   "main": "koa/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c ./rollup/rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Alicevia/I-love-JS#readme",
   "dependencies": {
-    "nodemon": "^2.0.13"
+    "@rollup/plugin-json": "^4.1.0",
+    "nodemon": "^2.0.13",
+    "rollup": "^2.64.0"
   }
 }
